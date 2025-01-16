@@ -1,0 +1,110 @@
+\documentclass[a4paper,10.5pt]{article}
+
+% Required packages
+\usepackage[empty]{fullpage}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=0.7cm]{geometry}
+\usepackage{fontawesome5}
+
+% Define colors
+\definecolor{headerblue}{RGB}{30, 90, 175}
+\definecolor{italicgray}{RGB}{128, 128, 128}
+
+% Customize hyperlinks
+\hypersetup{
+    colorlinks=true,
+    urlcolor=headerblue
+}
+
+% Custom section formatting with blue background
+\newcommand{\customsection}[1]{
+    \vspace{1pt} % Adjust vertical space above the section
+    \noindent\colorbox{headerblue}{
+        \makebox[\dimexpr\textwidth-2\fboxsep\relax]{
+            \textcolor{white}{\textbf{\large #1}} % Reduced font size to \large
+        }
+    }
+    \vspace{-2pt} % Adjust vertical space below the section
+}
+
+% Custom commands for job titles and companies
+\newcommand{\jobtitle}[1]{{\textcolor{headerblue}{\textit{#1}}}}
+
+% Header spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Reduce spacing in itemize environments
+\usepackage{enumitem}
+\setlist{nosep} % Remove spacing between items
+\setlist[itemize]{leftmargin=*} % Remove left margin
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\LARGE\textcolor{headerblue}{\textbf{JOHN DOE}}}\\[2pt]
+    {\large\textcolor{gray}{Software Developer}}\\[4pt]
+    \small
+    (123) 456-7890 $\bullet$ 
+    LinkedIn://\href{https://linkedin.com/in/johndoe}{johndoe} $\bullet$
+    Github://\href{https://github.com/johndoe}{johndoe} $\bullet$
+    \href{mailto:johndoe@email.com}{johndoe@email.com}
+\end{center}
+
+% Summary Section
+\customsection{SUMMARY}
+\vspace{1pt}
+Dynamic and results-driven software developer with experience in full-stack development, cloud platforms, and AI integration. Skilled in delivering scalable and innovative solutions for complex problems.
+\vspace{4pt}
+
+% Experience Section
+\customsection{EXPERIENCE}
+
+\textbf{TECH COMPANY INC.} \hfill San Francisco, CA\\
+\jobtitle{Software Engineer} \hfill \textit{(Jan 2022 -- Present)}
+\begin{itemize}\setlength{\itemsep}{1pt}
+    \item Developed microservices architecture to handle 1M+ API requests per day, improving system performance by 35%.
+    \item Designed and implemented CI/CD pipelines, reducing deployment time by 50%.
+    \item Enhanced application features with React and Node.js, boosting user engagement by 20%.
+\end{itemize}
+
+\textbf{STARTUP XYZ} \hfill Remote\\
+\jobtitle{Junior Developer} \hfill \textit{(May 2020 -- Dec 2021)}
+\begin{itemize}\setlength{\itemsep}{1pt}
+    \item Built and deployed a SaaS platform using Django and PostgreSQL, serving 500+ active users.
+    \item Integrated third-party APIs to enhance functionality and reduce development time by 40%.
+    \item Created interactive dashboards using React, improving data visualization for clients.
+\end{itemize}
+
+\customsection{PROJECTS}
+
+\textbf{Smart Expense Tracker} -- React, Node.js, MongoDB \hfill \textit{(March 2023)}
+\begin{itemize}\setlength{\itemsep}{1pt}
+    \item Developed a web app for tracking and forecasting expenses with AI-driven analytics.
+    \item Implemented JWT-based authentication and secure payment integration.
+\end{itemize}
+
+\textbf{AI Chatbot} -- Python, FastAPI, TensorFlow \hfill \textit{(Dec 2022)}
+\begin{itemize}\setlength{\itemsep}{1pt}
+    \item Created a conversational AI chatbot using NLP and machine learning, achieving 90% accuracy in intent recognition.
+    \item Deployed using Docker and Kubernetes, ensuring scalability and 99.9% uptime.
+\end{itemize}
+
+\customsection{SKILLS}
+
+\textbf{Languages:} Python, JavaScript, Java, SQL, C++\\
+\textbf{Technologies:} React, Node.js, Django, Flask, AWS, Docker, Kubernetes, Redis\\
+\textbf{Concepts:} Full-stack Development, Cloud Computing, Agile Methodologies, AI Integration
+
+\customsection{EDUCATION}
+
+\textbf{STATE UNIVERSITY}\\
+BS in Computer Science -- \textit{summa cum laude}, GPA: 3.8/4.0
+
+\textbf{CITY COLLEGE}\\
+AS in Information Technology -- GPA: 3.5/4.0
+
+\end{document}
